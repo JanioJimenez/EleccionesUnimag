@@ -1,0 +1,253 @@
+* {
+	margin: 0;
+	padding: 0;
+	
+}
+
+body {
+	background:  url('../../imagenes/fondo.png');
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: Roboto;
+}
+
+.encabezado {
+	opacity: 0.9;
+	width: 100%;
+	height: 120px; 
+	/*background: rgba(24, 27, 27, 0.897);	*/
+
+	background: rgba(114,209,26,1);
+	background: -moz-linear-gradient(left, rgba(114,209,26,1) 0%, rgba(114,209,26,1) 29%, rgba(191,255,15,1) 71%, rgba(191,255,15,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(114,209,26,1)), color-stop(29%, rgba(114,209,26,1)), color-stop(71%, rgba(191,255,15,1)), color-stop(100%, rgba(191,255,15,1)));
+	background: -webkit-linear-gradient(left, rgba(114,209,26,1) 0%, rgba(114,209,26,1) 29%, rgba(191,255,15,1) 71%, rgba(191,255,15,1) 100%);
+	background: -o-linear-gradient(left, rgba(114,209,26,1) 0%, rgba(114,209,26,1) 29%, rgba(191,255,15,1) 71%, rgba(191,255,15,1) 100%);
+	background: -ms-linear-gradient(left, rgba(114,209,26,1) 0%, rgba(114,209,26,1) 29%, rgba(191,255,15,1) 71%, rgba(191,255,15,1) 100%);
+	background: linear-gradient(to right, rgba(114,209,26,1) 0%, rgba(114,209,26,1) 29%, rgba(191,255,15,1) 71%, rgba(191,255,15,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#72d11a', endColorstr='#bfff0f', GradientType=1 );
+}
+
+.logo {
+	float: left;
+	background: url('../../imagenes/encabezadoUnimag.png');
+	background-repeat: no-repeat;
+	background-size: 700px;
+	margin-top: 5px;
+	margin-left: 150px;
+	width: 48%;
+	height: 110px;
+}
+
+.menu {
+	display: inline-block;
+	width: 41%;
+	height:	45px;
+	margin-top: 36px;
+}
+
+.centrarMenu {
+	float: right;
+	margin-right: 120px;
+}
+
+.iniciar {
+    font-size: 26px;
+    color: rgb(7, 20, 204);	
+    font-family: 'Dubai';
+	height: 40px;
+	cursor: pointer;
+}
+
+.iniciar:hover{
+	text-decoration: underline;
+	color: rgb(4, 0, 255);
+}
+
+.cajaJurado {
+	display: inline-block;
+	margin-left: 30px;
+	background-color: rgba(25, 0, 255, 0.918);
+	width: 100px;
+	border-radius: 5PX;
+	text-align: center;
+    cursor: pointer;
+}
+
+.cajaJurado:hover {
+	background-color: rgb(4, 0, 255);
+}
+
+.jurado {
+    font-size: 26px;
+    color: white;	
+    font-family: 'Dubai light';
+    
+}
+
+.fondoTransparente{
+	width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.53);
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 650px;
+}
+
+.formulario {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.7411764705882353);
+	width: 500px;
+	height: 500px;
+	border-radius: 20px;
+	border: 1px solid #000;
+}
+
+#cerrar {
+	width: 60px;
+	border-top-right-radius: 20px;
+	height: 37px;
+	margin-left: 88.5%;
+	font-size: 18px;
+	background: rgba(0, 0, 0, 0);
+	color: rgba(255, 255, 255, 0.685);
+	border: 1px solid rgba(182, 181, 181, 0.075);
+	cursor: pointer; 
+}
+
+#cerrar:hover {
+	background: rgb(255, 0, 0);
+	border: 1px solid rgb(255, 0, 0);
+}
+
+.regis {
+	background: url('../../imagenes/logoUnimag.png') no-repeat;
+	background-size: 140px;
+	width: 27%;
+	height: 140px;
+}
+
+.unimag {
+	width: 50%;
+	height: 55px;
+	font-size: 35px;
+	font-family: 'dubai';
+	text-align: center;
+	color: rgb(255, 115, 0);
+}
+
+.barra {
+	width: 70%;
+	margin-top: 20px;
+	border-radius: 5px;
+	border: 1px solid rgb(136, 255, 0);
+	height: 35px;
+	background-color: rgba(0, 0, 0, 0.53);
+	padding: 5px 5px 5px 15px;
+	font-size: 20px;
+	color: white;
+}
+
+#enviar {
+	width: 74%;
+	margin-top: 20px;
+	border-radius: 4px;
+	height: 45px;
+	font-size: 20px;
+	background-color: rgba(0, 0, 0, 0.53);
+	color: white;
+	border: 1px solid white;
+	cursor: pointer;
+}
+
+#enviar:hover {
+	background: rgba(166, 255, 0, 0.925);
+	border: 1px solid rgb(94, 255, 0);
+	color: rgb(15, 3, 122);
+	
+}
+
+#errorUsuario{
+	display: none;
+	justify-content: center;
+	width: 50%;
+	height: 20px;
+	font-size: 18px;
+	color: white;
+	background-color: rgba(0, 0, 0, 0);
+	border: 1px solid rgba(0, 0, 0, 0);
+	margin-top: 20px;
+}
+
+
+@media only screen and (max-width: 1300px) {
+
+	.logo {
+		background-size: 600px;
+	}
+    .menu {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 1270px) {
+
+    .menu {
+        width: 38%;
+    }
+}
+
+@media only screen and (max-width: 1230px) {
+	
+	.logo {
+		background-size: 550px;
+	}
+
+}
+
+@media only screen and (max-width: 1237px) {
+	
+	.logo {
+		margin-top: 15px;
+		background-size: 500px;
+	}
+
+}
+
+@media only screen and (max-width: 1073px) {
+	.logo {
+		margin-left: 130px;
+	}
+
+}
+
+@media only screen and (max-width: 1033px) {
+	.logo {
+		margin-left: 100px;
+	}
+
+}
+
+@media only screen and (max-width: 1000px) {
+	
+	.logo {
+		margin-top: 25px;
+		background-size: 400px;
+		margin-left: 100px;
+	}
+    .menu {
+		width: 40%;
+		
+    }
+}

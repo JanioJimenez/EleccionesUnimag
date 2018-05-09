@@ -1,0 +1,18 @@
+{
+    "jurados": [
+		{
+			"nombre" : "Johan Alberto",
+			"primer_Apellido" : "Robles",
+			"segundo_Apellido" : "Solano",
+			"cedula" : 1081826614,
+			"password" : 1444
+		},
+		{
+			"nombre" : "Jose Altamar",
+			"primer_Apellido" : "Robles",
+			"segundo_Apellido" : "Solano",
+			"cedula" : 1234,
+			"password" : 123
+		}
+	]
+}

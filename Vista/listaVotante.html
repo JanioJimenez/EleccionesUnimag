@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista de Votantes</title>
+    <link rel="stylesheet" href="css/stilos_ListaVotante.css">
+</head>
+<body onload='jurado()'>
+
+    <header class="encabezado1">
+        <div class="base">
+            <div class="logo"></div>
+            <span id="cerrarSesion" class="cerrar">Cerrar sesión</span>
+        </div>
+            
+    </header>
+
+    <div class="contenedor">
+        <h2 id='jurado'></h2>
+        <h1 id="hora"></h1>
+        <div class="buscar">
+            <input type="number" id="cedulaBuscada" placeholder="Buscar" class="buscar">
+            <input id="busCedula" type="button" value="Buscar">
+        </div>
+
+        <div class="lista">
+            <div class="listaEncabezado">
+                <div class="encabezado">
+
+                    <div class="cuadroOrden"><span class="orden">ORD</span></div>
+                    <div class="cuadroCedula">
+                        <span class="numCedula">
+                             <span class="negrita">No. CEDULA</span> 
+                            <span class="sinNegrita">
+                                VERIFIQUE TODO <br>
+                                EL NÚMERO
+                            </span> 
+                        </span>
+                    </div>
+                    <div class="cuadroNombres">
+                        <span class="apellidos_Nombres">APELLIDOS Y NOMBRES SEGUN SU CEDULA</span>
+                        <div class="primerApellido">
+                            <span class="primer_Apellido">
+                                PRIMER APELLIDO
+                            </span>
+                        </div>
+                        <div class="segundoApellido">
+                                <span class="segundo_Apellido">
+                                    SEGUNDO APELLIDO
+                                </span>
+                        </div>
+                        <div class="nombres">
+                            <span class="nombress">
+                                NOMBRES
+                           </span>
+                        </div>                           
+                    </div>
+
+                </div>
+
+                <div class="cuerpo">
+                    <div class="listaOrden"><span class="num">1<input type="checkbox" class="revisar"></span></div>
+                    <div class="ordenCedula"><span class="cedula">1081826604</span></div>
+                    <div class="listaApellido"><input type="text" placeholder="Apellido" class="apellido" disabled></div>
+                    <div class="listaSegundoApellido"><input type="text" placeholder="Segundo apellido" class="segundo_Apellido" disabled></div>
+                    <div class="listaNombres"><input type="text" placeholder="Nombres" class="nombre" disabled></div>
+                </div>
+                <div class="cuerpo">
+                    <div class="listaOrden"><span class="num">2<input type="checkbox" class="revisar"></span></div>
+                    <div class="ordenCedula"><span class="cedula">1081826605</span></div>
+                    <div class="listaApellido"><input type="text" placeholder="Apellido" class="apellido" disabled></div>
+                    <div class="listaSegundoApellido"><input type="text" placeholder="Segundo apellido" class="segundo_Apellido" disabled></div>
+                    <div class="listaNombres"><input type="text" placeholder="Nombres" class="nombre" disabled></div>
+                </div>
+                <div class="cuerpo">
+                    <div class="listaOrden"><span class="num">3<input type="checkbox" class="revisar"></span></div>
+                    <div class="ordenCedula"><span class="cedula">1081826606</span></div>
+                    <div class="listaApellido"><input type="text" placeholder="Apellido" class="apellido" disabled></div>
+                    <div class="listaSegundoApellido"><input type="text" placeholder="Segundo apellido" class="segundo_Apellido" disabled></div>
+                    <div class="listaNombres"><input type="text" placeholder="Nombres" class="nombre" disabled></div>
+                </div>
+                <div class="cuerpo">
+                    <div class="listaOrden"><span class="num">4<input type="checkbox" class="revisar"></span></div>
+                    <div class="ordenCedula"><span class="cedula">1081826607</span></div>
+                    <div class="listaApellido"><input type="text" placeholder="Apellido" class="apellido" disabled></div>
+                    <div class="listaSegundoApellido"><input type="text" placeholder="Segundo apellido" class="segundo_Apellido" disabled></div>
+                    <div class="listaNombres"><input type="text" placeholder="Nombres" class="nombre" disabled></div>
+                </div>
+                <div class="cuerpo">
+                    <div class="listaOrden"><span class="num">5<input type="checkbox" class="revisar"></span></div>
+                    <div class="ordenCedula"><span class="cedula">1081826608</span></div>
+                    <div class="listaApellido"><input type="text" placeholder="Apellido" class="apellido" disabled></div>
+                    <div class="listaSegundoApellido"><input type="text" placeholder="Segundo apellido" class="segundo_Apellido" disabled></div>
+                    <div class="listaNombres"><input type="text" placeholder="Nombres" class="nombre" disabled></div>
+                </div>
+                <div class="cuerpo">
+                    <div class="listaOrden"><span class="num">6<input type="checkbox" class="revisar"></span></div>
+                    <div class="ordenCedula"><span class="cedula">1081826609</span></div>
+                    <div class="listaApellido"><input type="text" placeholder="Apellido" class="apellido" disabled></div>
+                    <div class="listaSegundoApellido"><input type="text" placeholder="Segundo apellido" class="segundo_Apellido" disabled></div>
+                    <div class="listaNombres"><input type="text" placeholder="Nombres" class="nombre" disabled></div>
+                </div>
+                <div class="cuerpo">
+                    <div class="listaOrden"><span class="num">7<input type="checkbox" class="revisar"></span></div>
+                    <div class="ordenCedula"><span class="cedula">1081826610</span></div>
+                    <div class="listaApellido"><input type="text" placeholder="Apellido" class="apellido" disabled></div>
+                    <div class="listaSegundoApellido"><input type="text" placeholder="Segundo apellido" class="segundo_Apellido" disabled></div>
+                    <div class="listaNombres"><input type="text" placeholder="Nombres" class="nombre" disabled></div>
+                </div>
+                <div class="cuerpo">
+                    <div class="listaOrden"><span class="num">8<input type="checkbox" class="revisar"></span></div>
+                    <div class="ordenCedula"><span class="cedula">1081826611</span></div>
+                    <div class="listaApellido"><input type="text" placeholder="Apellido" class="apellido" disabled></div>
+                    <div class="listaSegundoApellido"><input type="text" placeholder="Segundo apellido" class="segundo_Apellido" disabled></div>
+                    <div class="listaNombres"><input type="text" placeholder="Nombres" class="nombre" disabled></div>
+                </div>
+                <div class="cuerpo">
+                    <div class="listaOrden"><span class="num">9<input type="checkbox" class="revisar"></span></div>
+                    <div class="ordenCedula"><span class="cedula">1081826612</span></div>
+                    <div class="listaApellido"><input type="text" placeholder="Apellido" class="apellido" disabled></div>
+                    <div class="listaSegundoApellido"><input type="text" placeholder="Segundo apellido" class="segundo_Apellido" disabled></div>
+                    <div class="listaNombres"><input type="text" placeholder="Nombres" class="nombre" disabled></div>
+                </div>
+                <div class="cuerpo">
+                    <div class="listaOrden"><span class="num">10<input type="checkbox" class="revisar"></span></div>
+                    <div class="ordenCedula"><span class="cedula">1081826613</span></div>
+                    <div class="listaApellido"><input type="text" placeholder="Apellido" class="apellido" disabled></div>
+                    <div class="listaSegundoApellido"><input type="text" placeholder="Segundo apellido" class="segundo_Apellido" disabled></div>
+                    <div class="listaNombres"><input type="text" placeholder="Nombres" class="nombre" disabled></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/evento.js"></script>
+</body>
+</html>

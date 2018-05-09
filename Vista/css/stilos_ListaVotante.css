@@ -1,0 +1,278 @@
+.encabezado1 {
+    display: inline-block;
+	opacity: 0.9;
+	width: 100%;
+	height: 100px; 
+    background: rgba(0, 0, 0, 0.911);	
+}
+
+.base{
+    width: 95%;
+    height: 100px;
+}
+
+.logo {
+    display: inline-block;
+    background: url('../../imagenes/RegisT.png');
+    background-repeat: no-repeat;
+    background-size: 135px;
+	float: left;
+	margin-top: 5px;
+	margin-left: 150px;
+	width: 50%;
+	height: 100px;
+}
+
+#cerrarSesion{
+	float: right;
+    font-size: 26px;
+    color: #00BFFF;	
+    font-family: 'Dubai light';
+    margin-top: 25px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#cerrarSesion:hover{
+	text-decoration: underline;
+	color: #01A9DB;
+}
+
+.contenedor {
+    margin: 0 auto;
+    width: 80%;
+    height: 50vh; 
+    margin-top: 30px;
+}
+.lista {
+    width: 100%;
+    height: 100%;
+    border: 1px solid grey;
+    box-shadow:
+    2px 2px #161616,
+    5px 5px #16161685,
+    3px 3px #16161680;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+}
+
+
+.listaEncabezado {
+    width: 100%;
+    height: 15%;
+    background: rgba(128, 128, 128, 0.493);
+    border-bottom: 1px solid grey;
+}
+
+.encabezado {
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid grey;
+}
+
+.cuadroOrden {
+    float: left;
+    width: 10%;
+    height: 100%;
+    text-align: center;
+    border-right: 1px solid grey; 
+    font-family: 'Arial black';
+    font-size: 10px;
+}
+
+.orden {
+    display: block;
+    margin-top: 21px;
+}
+
+.cuadroCedula {
+    float: left;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    border-right: 1px solid grey; 
+    font-family: 'Arial black';
+    font-size: 10px;
+}
+
+.numCedula {
+    display: block;
+    margin-top: 5px;
+}
+
+.negrita {
+    display: block;
+    margin-top: 5px;
+}
+
+.sinNegrita {
+    display: block;
+    font-family: 'Arial' !important; 
+    font-size: 13px;
+}
+
+.cuadroNombres {
+    width: 69%;
+    height: 100%;
+    text-align: center;
+    font-family: 'Arial black';
+    margin-left: 31%;
+}
+
+.apellidos_Nombres {
+    display: block;
+    font-size: 12px;
+    width: 100%;
+    border-bottom: 1px solid slategray;
+}
+
+.primerApellido {
+    float: left;
+    width: 30%;
+    height: 67%;
+    text-align: center;
+    border-right: 1px solid slategray;
+    font-family: 'Arial black';
+}
+
+
+.primer_Apellido {
+    font-size: 10px;
+}
+
+
+.segundoApellido {
+    float: left;
+    width: 30%;
+    height: 67%;
+    text-align: center;
+    font-family: 'Arial black';   
+    border-right: 1px solid slategray; 
+}
+
+.segundo_Apellido {
+    font-size: 10px;  
+}
+
+.nombres {
+    float: left;
+    width: 39%;
+    height: 59%;
+    text-align: center;
+    font-family: 'Arial black';     
+}
+
+.nombress {
+    font-size: 10px;   
+}
+
+.cuerpo {
+    float: left;
+    width: 100%;
+    height: 50%;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+.listaOrden {
+    float: left;
+    width: 10%;
+    height: 100%;
+    border-right: 1px solid grey; 
+}
+
+.num {
+    display: flex;
+    justify-content: center;    
+    align-content: center;
+    margin: auto;
+    margin-top: 5px;
+    font-family: 'Arial black';
+    font-size: 12px;
+}
+
+.revisar {
+    margin-top: 4px;
+}
+
+.ordenCedula {
+    float: left;
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid grey;
+}
+
+.cedula {
+    display: flex;
+    justify-content: center;    
+    align-content: center;
+    margin: auto;
+    margin-top: 5px;
+    font-family: 'Arial black';
+    font-size: 12px;
+
+}
+
+.listaApellido {
+    float: left;
+    width: 21.6%;
+    height: 100%;
+    border-right: 1px solid grey;   
+}
+
+.apellido {
+    display: inline-block;
+    width: 99%;
+    height: 80%;
+    font-family: 'Arial Black';
+    font-size: 12px;
+    text-align: center;
+    border: rgba(0, 0, 0, 0);
+    margin-top: 2px;
+}
+
+.listaSegundoApellido {
+    float: left;
+    width: 20.65%;
+    height: 100%;
+    border-right: 1px solid grey;   
+}
+
+.segundo_Apellido {
+    display: inline-block;
+    width: 99%;
+    height: 80%;
+    font-family: 'Arial Black';
+    font-size: 12px;
+    text-align: center;
+    border: rgba(0, 0, 0, 0);
+    margin-top: 2px;  
+}
+
+.encontrado{
+    color: green;
+}
+
+.nombre {
+    display: inline-block;
+    width: 100%;
+    height: 80%;
+    font-family: 'Arial Black';
+    font-size: 12px;
+    text-align: center;
+    border: rgba(0, 0, 0, 0);
+    margin-top: 2px;   
+}
+
+.listaNombres {
+    float: left;
+    width: 27%;
+    height: 100%; 
+}
+
+.buscar {
+    display: block;
+    width: 40%;
+    height: 20%;
+
+}
