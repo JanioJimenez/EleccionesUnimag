@@ -30,6 +30,7 @@ require ("../../Modelo/DAO/UsuarioDAO.php");
 			}else if($fila['roles_idroles'] == '3')	{
                 $_SESSION['usuario'] = 'Usuario';
 				header("Location:../../Vista/eleccion.php");
+				header("Location:../../Vista/organos/tarjetonAcademico.php");
             }	
 		
 					

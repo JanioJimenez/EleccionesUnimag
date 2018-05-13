@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Votaciones</title>
-    <script src="js/jquery-3.3.1.js"></script>
+    <script src="../js/jquery-3.3.1.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="css/targeton.css">
+    <link rel="stylesheet" type="text/css" href="css/stilos.css">
 </head>
 
 <body>
 
     <?php
-        session_start(); 
+        session_start();  
     ?>
 
     <div class="encabezado">
@@ -23,7 +23,7 @@
                 <img src="../imagenes/logoU.png" alt="">
             </div>
             <div class="titulo">
-                <h1>VOTO PARA LA FÓRMULA DEL CONSEJO SUPERIOR</h1>
+                <h1>VOTO PARA LA FÓRMULA DEL CONSEJO ACADEMICO</h1>
             </div>
             <div class="logoIn">
                 <img src="../imagenes/logoInnovador.png" alt="">
@@ -307,7 +307,7 @@
             </div>
         </div>
     </div>
-    <script src="js/evento.js"></script>
+    <script src="../js/evento.js"></script>
 </body>
 
 
