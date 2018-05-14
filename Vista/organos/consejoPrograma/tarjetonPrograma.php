@@ -23,7 +23,7 @@
                 <img src="../../../imagenes/logoU.png" alt="">
             </div>
             <div class="titulo">
-                <h1>VOTO PARA LA FÓRMULA DEL CONSEJO ACADEMICO</h1>
+                <h1>VOTO PARA LA FÓRMULA DEL CONSEJO DE PROGRAMA</h1>
             </div>
             <div class="logoIn">
                 <img src="../../../imagenes/logoInnovador.png" alt="">
