@@ -98,9 +98,9 @@ body {
 
 .Contenedor_targeton:hover{
     box-shadow:
-    2px 2px #000000b9,
-    5px 5px #000000b4,
-    3px 3px #000000b4;
+    2px 2px #1ce60ab9,
+    5px 5px #b4e20db4,
+    3px 3px #0bd827b4;
     -webkit-transform: translateX(-3px);
     transform: translateX(-3px);
 }
@@ -320,32 +320,34 @@ body {
 
 #cancelar{
     font-size: 20px;
-    color: white;	
+    color: rgba(255, 255, 255, 0.658);	
     width: 110px;
-    background-color: rgba(94, 98, 99, 0.945)	;
+    background-color: rgba(8, 7, 110, 0.945)	;
     font-family: 'Dubai light';
     border-radius: 5PX;
-    border: 1px solid rgba(94, 98, 99, 0.945);
+    border: 1px solid rgba(8, 7, 110, 0.945);
     cursor: pointer;
 }
 
 #cancelar:hover {
-    background: rgba(124, 125, 126, 0.747);
+    color: white;
+    background: rgb(2, 59, 216);
 	border: 1px solid rgba(133, 135, 136, 0.521);
 }
 
 #aceptar{
     font-size: 20px;
-    color: white;	
+    color: rgba(255, 255, 255, 0.658);	
     width: 110px;
-    background-color: rgba(94, 98, 99, 0.945);
-    border: 1px solid rgba(94, 98, 99, 0.945);
+    background-color: rgba(8, 7, 110, 0.945);
+    border: 1px solid rgba(8, 7, 110, 0.945);
     font-family: 'Dubai light';
     border-radius: 5PX;
     cursor: pointer;
 }
 
 #aceptar:hover {
-    background: rgba(124, 125, 126, 0.747);
-	border: 1px solid rgba(133, 135, 136, 0.521);
+    color: white;
+    background: rgb(2, 59, 216);
+	border: 1px solid rgba(2, 59, 216);
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,53 @@
     <title>Certificado Electoral</title>
     <link rel="stylesheet" href="css/certificadoElectoral.css">
     <script src="js/jquery-3.3.1.js"></script>
-    
+
 </head>
+
 <body>
     <header class="encabezado">
+        <div class="cajaSuperior">
             <div class="logo"></div>
-            <span id="cerrarSesion" class="cerrar">Cerrar sesión</span>
+            <!--<span id="cerrarSesion" class="cerrar">Cerrar sesión</span>-->
+        </div>
     </header>
+    <div class="bloqueSpace"></div>
     <div class="certificado">
-        <img src="../imagenes/certificado2018/certificado.png" alt="">
-    </div>
-    <script src="js/evento.js"></script>
+        <div class="cuadro">
+            <div class="margen"></div>
+            <div class="fondo">
+                <div class="fondoImg"></div>
+                <div class="centrar">
+                    <div class="space"></div>
+                    <div class="tituloUnimag"></div>
+                </div>
+                <div class="tabla">
+                    <div class="tituloCertificado">
+                        <h4>CERTIFICADO DE VOTACIÓN UNIMAGDALENA</h4>
+                    </div>
+                    <div class="codigo">
+                        <span>Código estudiantil:</span>
+                        <div class="editar"></div>
+                    </div>
+                    <div class="nombres">
+                        <span>Nombre y Apellidos:</span>
+                        <div class="editar2"></div>
+                    </div>
+                    <div class="mesa">
+                        <h3>Mesa de votación</h3>
+                    </div>
+                    <div class="jurado">
+                        <h3>Jurado</h3>
+                        <div class="editar2"></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="margen"></div>
+        </div>
+
+
+        <script src="js/evento.js"></script>
 </body>
+
 </html>

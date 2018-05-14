@@ -14,7 +14,7 @@ body {
 .encabezado {
 	opacity: 0.9;
 	width: 100%;
-	height: 120px; 
+	height: 125px; 
 	/*background: rgba(24, 27, 27, 0.897);	*/
 
 	background: rgba(114,209,26,1);
@@ -27,34 +27,45 @@ body {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#72d11a', endColorstr='#bfff0f', GradientType=1 );
 }
 
+.centrarEncabezado {
+	margin: auto;
+	width: 80%;
+	height: 125px;
+}
+
 .logo {
-	float: left;
+	display: inline-block;
 	background: url('../../imagenes/encabezadoUnimag.png');
 	background-repeat: no-repeat;
-	background-size: 700px;
-	margin-top: 5px;
-	margin-left: 150px;
-	width: 48%;
+	background-size: 100%;
+	margin-top: 10px;
+	width: 60%;
 	height: 110px;
 }
 
 .menu {
-	display: inline-block;
-	width: 41%;
-	height:	45px;
-	margin-top: 36px;
+	float: right;
+	margin-top: 42px;
+	width: 40%;
+	height:	31%;
 }
 
 .centrarMenu {
 	float: right;
-	margin-right: 120px;
+	width: 70%;
+	height:	70%;
+	
+}
+
+.cajaInicio {
+	display: inline-block;
+	width: 60%;
 }
 
 .iniciar {
-    font-size: 26px;
+	font-size: 22px;
     color: rgb(7, 20, 204);	
     font-family: 'Dubai';
-	height: 40px;
 	cursor: pointer;
 }
 
@@ -64,11 +75,11 @@ body {
 }
 
 .cajaJurado {
-	display: inline-block;
-	margin-left: 30px;
+	float: right;
 	background-color: rgba(25, 0, 255, 0.918);
-	width: 100px;
-	border-radius: 5PX;
+	width: 40%;
+	height: 37px;
+	border-radius: 5px;
 	text-align: center;
     cursor: pointer;
 }
@@ -78,7 +89,7 @@ body {
 }
 
 .jurado {
-    font-size: 26px;
+    font-size: 22px;
     color: white;	
     font-family: 'Dubai light';
     
@@ -188,66 +199,4 @@ body {
 	background-color: rgba(0, 0, 0, 0);
 	border: 1px solid rgba(0, 0, 0, 0);
 	margin-top: 20px;
-}
-
-
-@media only screen and (max-width: 1300px) {
-
-	.logo {
-		background-size: 600px;
-	}
-    .menu {
-        width: 40%;
-    }
-}
-
-@media only screen and (max-width: 1270px) {
-
-    .menu {
-        width: 38%;
-    }
-}
-
-@media only screen and (max-width: 1230px) {
-	
-	.logo {
-		background-size: 550px;
-	}
-
-}
-
-@media only screen and (max-width: 1237px) {
-	
-	.logo {
-		margin-top: 15px;
-		background-size: 500px;
-	}
-
-}
-
-@media only screen and (max-width: 1073px) {
-	.logo {
-		margin-left: 130px;
-	}
-
-}
-
-@media only screen and (max-width: 1033px) {
-	.logo {
-		margin-left: 100px;
-	}
-
-}
-
-@media only screen and (max-width: 1000px) {
-	
-	.logo {
-		margin-top: 25px;
-		background-size: 400px;
-		margin-left: 100px;
-	}
-    .menu {
-		width: 40%;
-		
-    }
 }

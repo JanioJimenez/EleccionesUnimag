@@ -10,16 +10,19 @@
 
 <body>
     <header class="encabezado">
-        <div class="logo"></div>
-        
-        <div class="menu">
-            <div class="centrarMenu">
-                <span id="clic" class="iniciar">Iniciar sesión</span>
-                <div class="cajaJurado">
-                <span id="inicioJurado" class="jurado">Jurado</span>
+        <div class="centrarEncabezado">
+            <div class="logo"></div>
+            <div class="menu">
+                <div class="centrarMenu">
+                    <div class="cajaInicio">
+                        <span id="clic" class="iniciar">Iniciar sesión</span>
+                    </div>
+                    <div class="cajaJurado">
+                        <span id="inicioJurado" class="jurado">Jurado</span>
+                    </div>
                 </div>
-            </div>
             
+            </div>
         </div>
     </header>
     <div id="display" class="fondoTransparente">

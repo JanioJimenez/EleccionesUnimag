@@ -10,60 +10,234 @@ body{
 .encabezado {
 	opacity: 0.9;
 	width: 100%;
-	height: 80px; 
-    background: #F2F2F2;	
+	height: 120px; 
+    background: rgba(114,209,26,1);
+	background: -moz-linear-gradient(left, rgba(114,209,26,1) 0%, rgba(114,209,26,1) 29%, rgba(191,255,15,1) 71%, rgba(191,255,15,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(114,209,26,1)), color-stop(29%, rgba(114,209,26,1)), color-stop(71%, rgba(191,255,15,1)), color-stop(100%, rgba(191,255,15,1)));
+	background: -webkit-linear-gradient(left, rgba(114,209,26,1) 0%, rgba(114,209,26,1) 29%, rgba(191,255,15,1) 71%, rgba(191,255,15,1) 100%);
+	background: -o-linear-gradient(left, rgba(114,209,26,1) 0%, rgba(114,209,26,1) 29%, rgba(191,255,15,1) 71%, rgba(191,255,15,1) 100%);
+	background: -ms-linear-gradient(left, rgba(114,209,26,1) 0%, rgba(114,209,26,1) 29%, rgba(191,255,15,1) 71%, rgba(191,255,15,1) 100%);
+	background: linear-gradient(to right, rgba(114,209,26,1) 0%, rgba(114,209,26,1) 29%, rgba(191,255,15,1) 71%, rgba(191,255,15,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#72d11a', endColorstr='#bfff0f', GradientType=1 );
 
+}
+
+.cajaSuperior{
+    display: flex;
+    width: 80%;
+    height: 120px;
+    margin-top: 10px;
+    margin: auto;
+    justify-content: center;
 }
 
 .logo {
-	background: url('../imagenes/registra.png');
-	background-repeat: no-repeat;
-	float: left;
-	margin-top: 5px;
-	margin-left: 300px;
-	width: 50%;
-	height: 70px;
+    margin-top: 10px;
+    background: url('../../imagenes/certificadoUnimag.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+	width: 70%;
+    height: 80%;
 }
 
+/*
 #cerrarSesion{
-	float: left;
+    display: inline-block;
     font-size: 26px;
-    color: #00BFFF;	
+    color: rgb(17, 0, 255);	
     font-family: 'Dubai light';
-    margin-top: 17px;
     height: 40px;
     cursor: pointer;
-}
+}*/
 
 #cerrarSesion:hover{
-	text-decoration: underline;
-	color: #01A9DB;
+    text-decoration: underline;
+    font-family: 'Dubai';
+	color: rgb(16, 1, 219);
 }
 
-
+.bloqueSpace {
+    width: 100vw;
+    height: 12vh;
+}
 
 .certificado {
-    display: flex;
-    position: absolute; 
-    top: 25vh;
-    left: 30vw;
+    padding: 30px;
+    margin: auto;
     width: 40vw;
     height: 50vh;
+    background: white;
 }
 
-img {
-    display: flex;
+.cuadro {
     width: 40vw;
     height: 50vh;
+    border: 1px solid rgba(230, 106, 4, 0.966); 
 }
 
-.subtitulo {
+.margen {
+    width: 100%;
+    height: 10%;
+}
+
+.centrar {
+    width: 100%;
+    height: 70px;
+}
+
+.space {
+    width: 100%;
+    height: 10px;
+}
+
+.tituloUnimag {
+    margin: auto;
+    width: 73%;
+    height: 60px;
+    background: url('../../imagenes/Universidad.png')no-repeat;
+    background-size: 100%;
+}
+
+.fondo {
+    width: 100%;
+    height: 39.5vh;
+}
+
+.fondoImg {
     position: absolute;
-    left: 8.8vw;
-    top: 17vh;
-    color: black;
-    font-family: 'Calibri';
-    font-weight: bold;
-    font-size: 14px;
-    transform: scaleX(1.3);
+    margin-left: 9%; 
+    width: 25%;
+    height: 39.5vh;
+    background: url('../../imagenes/logoTransparente.png') no-repeat;
+    background-size: 87%;
 }
+
+.tabla {
+    margin-top: 20px;
+}
+
+.tituloCertificado {
+    text-align: center;
+    font-family: 'Dubai';
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.codigo {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    font-family: 'Dubai';
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.editar {
+    margin-left: 11px;
+    width: 68%;
+    border-bottom: 1px solid rgb(105, 108, 109);
+}
+
+.nombres {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    font-family: 'Dubai';
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.editar2 {
+    width: 68%;
+    border-bottom: 1px solid rgb(105, 108, 109);
+}
+
+.mesa {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    font-family: 'Dubai';
+    font-size: 16px;
+    margin-bottom: 10px;     
+}
+
+.jurado {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    font-family: 'Dubai';
+    font-size: 16px;
+    margin-bottom: 10px; 
+}
+
+/*
+@media only screen and (max-width: 1296px) {
+
+	.logo {
+		background-size: 720px;
+    }
+    .encabezado{
+        height: 105px;
+    }
+}
+
+@media only screen and (max-width: 1296px) {
+
+	.logo {
+		background-size: 620px;
+    }
+    .encabezado{
+        height: 90px;
+    }
+}
+
+@media only screen and (max-width: 1102px) {
+
+	.logo {
+		background-size: 550px;
+    }
+    .encabezado{
+        height: 80px;
+    }
+}
+
+@media only screen and (max-width: 987px) {
+
+	.logo {
+		background-size: 470px;
+    }
+    .encabezado{
+        height: 80px;
+    }
+}
+
+@media only screen and (max-width: 838px) {
+
+	.logo {
+		background-size: 450px;
+    }
+    .encabezado{
+        height: 70px;
+    }
+}
+
+@media only screen and (max-width: 809px) {
+
+	.logo {
+		background-size: 400px;
+    }
+    .encabezado{
+        height: 60px;
+    }
+}
+
+@media only screen and (max-width: 717px) {
+
+	.logo {
+		background-size: 300px;
+    }
+    .encabezado{
+        height: 50px;
+    }
+}
+*/
