@@ -3,6 +3,11 @@ $('#clic').on('click', function () {
 	$('#display').css('display', 'flex');
 });
 
+
+$('.cajaJurado').on('click', function(){
+	$('#display').css('display', 'flex');
+});
+
 $('#inicioJurado').on('click', function(){
 	$('#display').css('display', 'flex');
 });
