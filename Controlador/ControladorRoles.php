@@ -12,8 +12,8 @@
 
 				foreach ($array_rol as $row) {
 				$html .= '<tr>
-							<td id="idroles">'.$row['idroles'].'</td>
-				            <td id="rol">'.$row['role'].' </td>
+							<td id="idRol">'.$row['idRol'].'</td>
+				            <td id="descripcion">'.$row['descripcion'].' </td>
 				            <td><a class="editar" href="#modal2"><i class="material-icons">edit</i></a><a class="borrar"><i class="material-icons">delete</i></a></td>
 				          </tr>';
 				
@@ -29,7 +29,7 @@
 
 		if($_POST['tipo'] == 'agregar'){
 			$rolesDAO = new RolesDAO();
-			$rol = $_POST['rol'];
+			$idRol = $_POST['idRol'];
 			$errores = $rolesDAO->crearRoles($rol);
 			if($errores == 0){
 				echo 'Error';
@@ -40,8 +40,8 @@
 
 		if($_POST['tipo'] == 'eliminar'){
 			$rolesDAO = new RolesDAO();
-			$idroles = $_POST['idroles'];
-			$errores = $rolesDAO->borrarRoles($idroles);
+			$idRol = $_POST['idRol'];
+			$errores = $rolesDAO->borrarRoles($idRol);
 			if($errores == 0){
 				echo 'Error';
 			}
@@ -51,9 +51,9 @@
 
 		if($_POST['tipo'] == 'editar'){
 			$rolesDAO = new RolesDAO();
-			$idroles = $_POST['idroles'];
-			$rolEditar = $_POST['rolEditar'];
-			$errores = $rolesDAO->editarRoles($idroles, $rolEditar);
+			$idRol = $_POST['idRol'];
+			$idRolEditar = $_POST['idRolEditar'];
+			$errores = $rolesDAO->editarRoles($idRol, $idRolEditar);
 			if($errores == 0){
 				echo 'Error';
 			}

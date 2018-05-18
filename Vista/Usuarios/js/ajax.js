@@ -23,8 +23,14 @@ $(document).ready(function() {
             success: function(res) {
                 if (res == 'No hay datos') {
                     $('.selectRoles').html('Esta tabla usa datos de otra tabla porfavor llene la otra tabla');
+                    $('.selectEstado').html('Esta tabla usa datos de otra tabla porfavor llene la otra tabla');
+                    $('.selectMesa').html('Esta tabla usa datos de otra tabla porfavor llene la otra tabla');
+                    $('.selectFacultad').html('Esta tabla usa datos de otra tabla porfavor llene la otra tabla');
                 } else {
                     $('.selectRoles').html(res);
+                    $('.selectEstado').html(res);
+                    $('.selectMesa').html(res);
+                    $('.selectFacultad').html(res);
                 }
 
                 $('select').material_select();
@@ -34,17 +40,17 @@ $(document).ready(function() {
 
     $('#add-form').submit(function(e) {
         e.preventDefault();
-        var nombre1 = $('input[name="nombre1"]').val();
-        var nombre2 = $('input[name="nombre2"]').val();
-        var apellido1 = $('input[name="apellido1"]').val();
-        var apellido2 = $('input[name="apellido2"]').val();
-        var email = $('input[name="email"]').val();
+        var nombre = $('input[name="nombre"]').val();
+        var apellido = $('input[name="apellido"]').val();
         var codigo = $('input[name="codigo"]').val();
         var pass = $('input[name="pass"]').val();
-        var rol = $('#selectRoles').val();
+        var idRol = $('#selectRoles').val();
+        var idEstado = $('#selectEstado').val();
+        var idMesa = $('#selectMesa').val();
+        var idFacultad = $('#selectFacultad').val();
         $.ajax({
             url: '/eleccionesUnimag/Controlador/ControladorUsuario.php',
-            data: { tipo: 'agregar', nombre1: nombre1, nombre2: nombre2, apellido1: apellido1,apellido2: apellido2, email: email, codigo: codigo, pass: pass,rol:rol },
+            data: { tipo: 'agregar', nombre: nombre,apellido: apellido, codigo: codigo, pass: pass, idRol: idRol, idEstado: idEstado, idMesa: idMesa, idFacultad: idFacultad},
             type: 'POST',
             success: function(res) {
                 if (res == 'Error') {
@@ -54,14 +60,10 @@ $(document).ready(function() {
                     reload();
                     $('#modal1').modal('close');
                     $('.error-create').html('');
-                    $('input[name="nombre1"]').val(' ');
-                    $('input[name="nombre2"]').val(' ');
-                    $('input[name="apellido1"]').val(' ');
-                    $('input[name="apellido2"]').val(' ');
-                    $('input[name="email"]').val(' ');
+                    $('input[name="nombre"]').val(' ');
+                    $('input[name="apellido"]').val(' ');
                     $('input[name="codigo"]').val(' ');
                     $('input[name="pass"]').val(' ');
-
                 }
 
             }
@@ -70,19 +72,19 @@ $(document).ready(function() {
 
     $('#edit-form').submit(function(e) {
         e.preventDefault();
-        var nombre1Editar = $('input[name="nombre1Editar"]').val();
-        var nombre2Editar = $('input[name="nombre2Editar"]').val();
-        var apellido1Editar = $('input[name="apellido1Editar"]').val();
-        var apellido2Editar = $('input[name="apellido2Editar"]').val();
-        var emailEditar = $('input[name="emailEditar"]').val();
+        var nombreEditar = $('input[name="nombreEditar"]').val();
+        var apellidoEditar = $('input[name="apellidoEditar"]').val();
         var codigoEditar = $('input[name="codigoEditar"]').val();
         var passEditar = $('input[name="passEditar"]').val();
-        var rolEditar = $('#selectRolesEditar').val();
+        var idRolEditar = $('#selectRolesEditar').val();
+        var idEstadoEditar = $('#selectEstadoEditar').val();
+        var idMesaEditar = $('#selectMesaEditar').val();
+        var idFacultadEditar = $('#selectFacultadEditar').val();
         $.ajax({
             url: '/eleccionesUnimag/Controlador/ControladorUsuario.php',
-            data: { tipo: 'editar', idUsuario: pk1, nombre1Editar: nombre1Editar, nombre2Editar: nombre2Editar,
-                    apellido1Editar: apellido1Editar, apellido2Editar: apellido2Editar, emailEditar: emailEditar,
-                    codigoEditar: codigoEditar, passEditar: passEditar,rolEditar:rolEditar },
+            data: { tipo: 'editar', id: pk1, nombreEditar: nombreEditar, apellidoEditar: apellidoEditar,
+                    codigoEditar: codigoEditar, passEditar: passEditar, idRolEditar: idRolEditar, idEstadoEditar: idEstadoEditar,
+                    idMesaEditar: idMesaEditar, idFacultadEditar: idFacultadEditar},
             type: 'POST',
             success: function(res) {
                 if (res == 'Error') {
@@ -99,10 +101,10 @@ $(document).ready(function() {
     })
 
     $(document).on('click', '.borrar', function() {
-        var idUsuario = $(this).closest('tr').find('#idUsuario').html();
+        var idUsuario = $(this).closest('tr').find('#id').html();
         $.ajax({
             url: '/eleccionesUnimag/Controlador/ControladorUsuario.php',
-            data: { tipo: 'eliminar', idUsuario: idUsuario },
+            data: { tipo: 'eliminar', id: id },
             type: 'POST',
             success: function(res) {
                 if (res == 'Error') {
@@ -117,21 +119,15 @@ $(document).ready(function() {
 
 
     $(document).on('click', '.editar', function() {
-        pk1 = $(this).closest('tr').find('#idUsuario').html();
-        pk2 = $(this).closest('tr').find('#nombre1').html();
-        pk3 = $(this).closest('tr').find('#nombre2').html();
-        pk4 = $(this).closest('tr').find('#apellido1').html();
-        pk5 = $(this).closest('tr').find('#apellido2').html();
-        pk6 = $(this).closest('tr').find('#email').html();
-        pk7 = $(this).closest('tr').find('#codigo').html();
-        pk8 = $(this).closest('tr').find('#pass').html();
-        $('input[name="nombre1Editar"]').val(pk2);
-        $('input[name="nombre2Editar"]').val(pk3);
-        $('input[name="apellido1Editar"]').val(pk4);
-        $('input[name="apellido2Editar"]').val(pk5);
-        $('input[name="emailEditar"]').val(pk6);
-        $('input[name="codigoEditar"]').val(pk7);
-        $('input[name="passEditar"]').val(pk8);
+        pk1 = $(this).closest('tr').find('#id').html();
+        pk2 = $(this).closest('tr').find('#nombre').html();
+        pk3 = $(this).closest('tr').find('#apellido').html();
+        pk4 = $(this).closest('tr').find('#codigo').html();
+        pk5 = $(this).closest('tr').find('#pass').html();
+        $('input[name="nombreEditar"]').val(pk2);
+        $('input[name="apellidoEditar"]').val(pk3);
+        $('input[name="codigoEditar"]').val(pk4);
+        $('input[name="passEditar"]').val(pk5);
 
 
         $.ajax({

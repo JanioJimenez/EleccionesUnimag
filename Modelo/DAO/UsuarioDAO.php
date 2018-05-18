@@ -9,7 +9,7 @@
 		}
 
 		public function Login($username,$password){
-			$sql = "SELECT * FROM usuarios WHERE codigo=? AND pass=?";
+			$sql = "SELECT * FROM usuario WHERE codigo=? AND pass=?";
 			$consulta = $this->db->prepare($sql);
 			$resultado = $consulta->execute(array($username,$password));
 			$usuarios = $consulta->fetchall(PDO::FETCH_ASSOC);
@@ -25,7 +25,7 @@
 		}
 
 		public function listarUsuarios(){
-			$sql = "SELECT * FROM usuarios";
+			$sql = "SELECT * FROM usuario";
 			$consulta = $this->db->prepare($sql);
 			$resultado = $consulta->execute();
 			$usuar = $consulta->fetchall(PDO::FETCH_ASSOC);
@@ -41,7 +41,7 @@
 		}
 
 		public function listarRoles(){
-			$sql = "SELECT * FROM roles";
+			$sql = "SELECT * FROM rol";
 			$consulta = $this->db->prepare($sql);
 			$resultado = $consulta->execute();
 			$usuar = $consulta->fetchall(PDO::FETCH_ASSOC);
@@ -56,11 +56,11 @@
 
 		}
 
-		public function editarUsuarios($idUsuario,$nombre1,$nombre2,$apellido1,$apellido2,$email,$codigo,$pass,$rol){
+		public function editarUsuarios($id,$nombre,$apellido,$codigo,$pass,$idRol,$idEstado,$idMesa,$idFacultad){
 			try{
-				$sql = "UPDATE usuarios SET nombre1 = ?, nombre2 = ?, apellido1=?, apellido2=?, email=?, codigo= ?, pass = ?, roles_idroles = ? WHERE idUsuario = ?";
+				$sql = "UPDATE usuario SET nombre = ? apellido = ?, codigo = ?, pass = ?, idRol = ?, idEstado = ?, idMesa = ?, idFacultad = ? WHERE idUsuario = ?";
 				$consulta = $this->db->prepare($sql);
-				$resultado = $consulta->execute(array($nombre1,$nombre2,$apellido1,$apellido2,$email ,$codigo,$pass,$rol,$idUsuario));
+				$resultado = $consulta->execute(array($nombre,$apellido,$codigo,$pass,$idRol,$idEstado,$idMesa,$idFacultad,$id));
 				return 1;
 			}catch (PDOException $e){
 				return 0;
@@ -70,11 +70,11 @@
 
 		}
 
-		public function borrarUsuarios($idUsuario){
+		public function borrarUsuarios($id){
 			try{
-				$sql = "DELETE FROM usuarios WHERE idUsuario = ?";
+				$sql = "DELETE FROM usuario WHERE id = ?";
 				$consulta = $this->db->prepare($sql);
-				$resultado = $consulta->execute(array($idUsuario));
+				$resultado = $consulta->execute(array($id));
 				return 1;
 			}catch (PDOException $e){
 				return 0;
@@ -84,11 +84,11 @@
 
 		}
 
-		public function crearUsuarios($nombre1,$nombre2,$apellido1,$apellido2,$email,$codigo,$pass,$rol){
+		public function crearUsuarios($nombre,$apellido,$codigo,$pass,$idRol,$idEstado,$idMesa,$idFacultad){
 			try{
-				$sql = "INSERT INTO usuarios VALUES(NULL,?,?,?,?,?,?,?,?)";
+				$sql = "INSERT INTO usuario VALUES(NULL,?,?,?,?,?,?,?,?)";
 				$consulta = $this->db->prepare($sql);
-				$resultado = $consulta->execute(array($nombre1,$nombre2,$apellido1,$apellido2,$email,$codigo,$pass,$rol));
+				$resultado = $consulta->execute(array($nombre,$apellido,$codigo,$pass,$idRol,$idEstado,$idMesa,$idFacultad));
 				return 1;
 			}catch (PDOException $e){
 				return 0;

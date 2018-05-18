@@ -21,13 +21,13 @@ require ("../../Modelo/DAO/UsuarioDAO.php");
 				$fila=$u;		
 			};
 
-			if($fila['roles_idroles']== '1'){
+			if($fila['idRol']== 'ADMINISTRADOR'){
 				$_SESSION['usuario'] = 'administrador';
 				header("Location:../../Vista/Usuarios/usuarios.php");
-			}else if($fila['roles_idroles']== '2'){
+			}else if($fila['idRol']== 'JURADO'){
 				$_SESSION['usuario'] = 'Jurado';
 				header("Location:../../Vista/listaVotante.html");
-			}else if($fila['roles_idroles'] == '3')	{
+			}else if($fila['idRol'] == 'VOTANTE')	{
                 $_SESSION['usuario'] = 'Usuario';
 				header("Location:../../Vista/eleccion.php");
 				//header("Location:../../Vista/organos/consejoAcademico/tarjetonAcademico.php");

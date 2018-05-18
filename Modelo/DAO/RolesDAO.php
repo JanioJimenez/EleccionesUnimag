@@ -11,7 +11,7 @@
 
 
 		public function listarRoles(){
-			$sql = "SELECT * FROM roles";
+			$sql = "SELECT * FROM rol";
 			$consulta = $this->db->prepare($sql);
 			$resultado = $consulta->execute();
 			$rol = $consulta->fetchall(PDO::FETCH_ASSOC);
@@ -26,11 +26,11 @@
 
 		}
 
-		public function editarRoles($idRoles,$rol){
+		public function editarRoles($idRol,$descripcion){
 			try{
-				$sql = "UPDATE roles SET role = ? WHERE idroles = ?";
+				$sql = "UPDATE rol SET descripcion = ? WHERE idRol = ?";
 				$consulta = $this->db->prepare($sql);
-				$resultado = $consulta->execute(array($rol,$idRoles));
+				$resultado = $consulta->execute(array($descripcion,$idRol));
 				return 1;
 			}catch (PDOException $e){
 				return 0;
@@ -40,11 +40,11 @@
 
 		}
 
-		public function borrarRoles($idRoles){
+		public function borrarRoles($idRol){
 			try{
-				$sql = "DELETE FROM roles WHERE idroles = ?";
+				$sql = "DELETE FROM rol WHERE idRol = ?";
 				$consulta = $this->db->prepare($sql);
-				$resultado = $consulta->execute(array($idRoles));
+				$resultado = $consulta->execute(array($idRol));
 				return 1;
 			}catch (PDOException $e){
 				return 0;
@@ -54,11 +54,11 @@
 
 		}
 
-		public function crearRoles($role){
+		public function crearRoles($idRol){
 			try{
-				$sql = "INSERT INTO roles VALUES(NULL,?)";
+				$sql = "INSERT INTO idRol VALUES(?,NULL)";
 				$consulta = $this->db->prepare($sql);
-				$resultado = $consulta->execute(array($role));
+				$resultado = $consulta->execute(array($idRol));
 				return 1;
 			}catch (PDOException $e){
 				return 0;

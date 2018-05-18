@@ -17,10 +17,10 @@ $(document).ready(function() {
 	
 	$('#add-form').submit(function(e){
 		e.preventDefault();
-		var rol = $('input[name="rol"]').val();
+		var idRol = $('input[name="idRol"]').val();
 		$.ajax({
 			url: '/eleccionesUnimag/Controlador/ControladorRoles.php',
-			data : {tipo : 'agregar',rol: rol},
+			data : {tipo : 'agregar',idRol: idRol},
 			type : 'POST',
 			success: function(res){
 				if(res == 'Error'){
@@ -30,7 +30,7 @@ $(document).ready(function() {
 					 reload();
 					 $('#modal1').modal('close');
 					 $('.error-create').html('');
-					 $('input[name="rol"]').val(' ');
+					 $('input[name="idRol"]').val(' ');
 				}
 
 			}
@@ -39,10 +39,10 @@ $(document).ready(function() {
 
 	$('#edit-form').submit(function(e){
 		e.preventDefault();
-		var rolEditar = $('input[name="rolEditar"]').val();
+		var idRolEditar = $('input[name="idRolEditar"]').val();
 		$.ajax({
 			url: '/eleccionesUnimag/Controlador/ControladorRoles.php',
-			data : {tipo : 'editar', idroles: pk1 , rolEditar: rolEditar},
+			data : {tipo : 'editar', idRol: idRol },
 			type : 'POST',
 			success: function(res){
 				if(res == 'Error'){
@@ -59,10 +59,10 @@ $(document).ready(function() {
 	})
 
 	$(document).on('click', '.borrar' ,function(){	
-		var idroles = $(this).closest('tr').find('#idroles').html();
+		var idroles = $(this).closest('tr').find('#idRol').html();
 		$.ajax({
 			url: '/eleccionesUnimag/Controlador/ControladorRoles.php',
-			data : {tipo : 'eliminar',idroles: idroles},
+			data : {tipo : 'eliminar',idRol: idRol},
 			type : 'POST',
 			success: function(res){
 				if(res == 'Error'){
@@ -77,10 +77,9 @@ $(document).ready(function() {
 
 
 	$(document).on('click', '.editar' ,function(){
-		    pk1 = $(this).closest('tr').find('#idroles').html();
-		    pk2 = $(this).closest('tr').find('#rol').html();
+		    pk1 = $(this).closest('tr').find('#idRol').html();
 
-			$('input[name="rolEditar"]').val(pk2);
+			$('input[name="idRolEditar"]').val(pk1);
 	});
 
 

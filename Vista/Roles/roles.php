@@ -24,7 +24,7 @@
           <form id="add-form" action="" method="POST" class="col s12">
              <div class="row">
               <div class="input-field col s12"><i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" name="rol" class="validate" required>
+                <input id="icon_prefix" type="text" name="idRol" class="validate" required>
                 <label for="icon_prefix">Rol</label>
               </div>
             </div>
@@ -43,7 +43,7 @@
           <form id="edit-form" action="" method="" class="col s12">
              <div class="row">
               <div class="input-field col s12"><i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" name="rolEditar" class="validate" required>
+                <input id="icon_prefix" type="text" name="idRolEditar" class="validate" required>
                 <label for="icon_prefix"></label>
               </div>
             </div>
@@ -77,8 +77,8 @@
      <table class="tablaDatos">
         <thead>
           <tr>
-              <th>idRoles</th>
-              <th>Rol</th>
+              <th>idRol</th>
+              <th>Descripcion</th>
           </tr>
         </thead>
         <tbody class="cuerpoTabla">

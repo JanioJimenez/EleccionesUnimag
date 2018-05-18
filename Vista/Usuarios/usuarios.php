@@ -23,32 +23,14 @@
           <form id="add-form" action="" method="POST" class="col s12">
             <div class="row">
               <div class="input-field col s12"><i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" name="nombre1" class="validate" required>
+                <input id="icon_prefix" type="text" name="nombre" class="validate" required>
                 <label for="icon_prefix">Nombre</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12"><i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" name="nombre2" class="validate">
-                <label for="icon_prefix">Segundo nombre</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12"><i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" name="apellido1" class="validate" require>
-                <label for="icon_prefix">Primer apellido</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12"><i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" name="apellido2" class="validate" require>
-                <label for="icon_prefix">Segundo Apellido</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12"><i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" name="email" class="validate"require>
-                <label for="icon_prefix">email</label>
+                <input id="icon_prefix" type="text" name="apellido" class="validate" require>
+                <label for="icon_prefix">Apellido</label>
               </div>
             </div>
             <div class="row">
@@ -67,6 +49,18 @@
               <div class="input-field col s12 selectRoles">  
               </div>
             </div>
+            <div class="row">
+              <div class="input-field col s12 selectEstado">  
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 selectMesa">  
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 selectFacultad">  
+              </div>
+            </div>
             <div class="modal-footer">
               <h6 class="error-create"></h6>
               <button id="addButon" type="submit" class="modal-action waves-effect waves-green btn-flat"  name="addButon">Registrar</button>
@@ -82,31 +76,13 @@
           <form id="edit-form" action="" method="" class="col s12">
             <div class="row">
               <div class="input-field col s12"><i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" name="nombre1Editar" class="validate" required>
+                <input id="icon_prefix" type="text" name="nombreEditar" class="validate" required>
                 <label for="icon_prefix"></label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12"><i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" name="nombre2Editar" class="validate" >
-                <label for="icon_prefix"></label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12"><i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" name="apellido1Editar" class="validate" require>
-                <label for="icon_prefix"></label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12"><i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" name="apellido2Editar" class="validate" require>
-                <label for="icon_prefix"></label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12"><i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" name="emailEditar" class="validate" require>
+                <input id="icon_prefix" type="text" name="apellidoEditar" class="validate" require>
                 <label for="icon_prefix"></label>
               </div>
             </div>
@@ -124,6 +100,18 @@
             </div>
             <div class="row">
               <div class="input-field col s12 selectRolesEditar">  
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 selectEstadoEditar">  
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 selectMesaEditar">  
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 selectFacultadEditar">  
               </div>
             </div>
             <div class="modal-footer">
@@ -154,15 +142,15 @@
      <table class="tablaDatos">
         <thead>
           <tr>
-              <th id="idUsuario">idUsuario</th>
-              <th>Nombre1</th>
-              <th>Nombre2</th>
-              <th>Apellido1</th>
-              <th>Apellido2</th>
-              <th>email</th>
+              <th id="id">id</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
               <th>Código</th>
-              <th>Contraseña</th>
+              <th>Password</th>
               <th>Rol</th>
+              <th>Esatado</th>
+              <th>Mesa</th>
+              <th>Facultad</th>
           </tr>
         </thead>
         <tbody class="cuerpoTabla">

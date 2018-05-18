@@ -20,14 +20,6 @@
 
   <div id="modal1" class="modal">
       <div class="modal-content">
-        <div class="row">
-          <form id="add-form" action="" method="POST" class="col s12">
-             <div class="row">
-              <div class="input-field col s12"><i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" name="nombre" class="validate" required>
-                <label for="icon_prefix">Nombre de Facultad</label>
-              </div>
-            </div>
             <div class="modal-footer">
               <h6 class="error-create"></h6>
               <button id="addButon" type="submit" class="modal-action waves-effect waves-green btn-flat"  name="addButon">Registrar</button>
@@ -41,12 +33,6 @@
       <div class="modal-content">
         <div class="row">
           <form id="edit-form" action="" method="" class="col s12">
-             <div class="row">
-              <div class="input-field col s12"><i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" name="nombreEditar" class="validate" required>
-                <label for="icon_prefix"></label>
-              </div>
-            </div>
             <div class="modal-footer">
               <h6 class="error-create"></h6>
               <button id="editButton" type="submit" class="modal-action waves-effect waves-green btn-flat"  name="editButon">Editar</button>
@@ -78,8 +64,7 @@
      <table class="tablaDatos">
         <thead>
           <tr>
-              <th>id</th>
-              <th>Nombre de Facultad</th>
+              <th>idFacultad</th>
           </tr>
         </thead>
         <tbody class="cuerpoTabla">
